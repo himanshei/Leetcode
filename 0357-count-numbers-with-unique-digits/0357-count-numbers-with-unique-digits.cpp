@@ -1,8 +1,8 @@
 class Solution {
 public:
     int func(int i,vector<bool>&vis,int n){
-        if(i==0){
-            return 1;
+        if(i==0){                //base case
+            return 1;    
         }
         int ans=0;
         int d=0;
@@ -13,9 +13,9 @@ public:
             if(vis[j]==1) continue;
             vis[j]=1;
             ans=ans+func(i-1,vis,n);
-            vis[j]=0;           //backtracking
+            vis[j]=0;        //backtracking
         }
-          return ans;
+        return ans;
     }
     int countNumbersWithUniqueDigits(int n) {
        int ans=0;
@@ -23,6 +23,6 @@ public:
        for(int i=1;i<=n;i++){
         ans=ans+func(i,vis,i);
        }
-       return ans+1;       //for handling the 0 case i.e. for n=0 the no existing is 1 so +1 is there
+       return ans+1;       //for handling the 0 case i.e. for n=0 the number existing is 1 so +1 is there
     }
 };
