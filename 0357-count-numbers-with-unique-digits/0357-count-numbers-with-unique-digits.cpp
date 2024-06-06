@@ -6,8 +6,8 @@ public:
         }
         int ans=0;
         int d=0;
-        if(i==n){            //checking if the i and n are equal if they are means its the first positiion and 0 can be at the first position
-            d++;             //making d to start as 1 if its the first position i.e. i and n are equal
+        if(i==n){            //checking if the i and n are equal if they are means its the first positiion since d=0 and 0 cannot be at the first position
+            d++;             //making d to start as 1 if its the first position i.e. when i and n are equal
         }
         for(int j=d;j<=9;j++){
             if(vis[j]==1) continue;
